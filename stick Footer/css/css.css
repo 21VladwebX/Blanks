@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+}
+
+html, body{
+	height: 100%;
+}
+body{
+	display: flex;
+	flex-direction: column;
+
+}
+.content{
+	flex-grow:2;
+}
+.footer{
+	border:2px solid silver;
+	
+}

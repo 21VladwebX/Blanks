@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf8">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<title>Animate.CSS</title>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  	<div class="main">
+  		<h1 class="animated wobble">Animate.CSS</h1>
+  		<!-- first class name compulsorily(обов'язково) and second name class-name of animations -->
+  		<h2 class="animated wobble">примеры и практика:</h2>
+
+  		<h3>bounceIn</h3>
+  		<img src="images/dog1.jpg" alt="Собака - лучший друг человека" class="animated bounceIn">
+  		<p><em>class="animated bounceIn"</em></p>
+
+  		<h3>rotateIn</h3>
+  		<img src="images/dog2.jpg" alt="Собака - лучший друг человека" class="animated rotateIn">
+  		<p><em>class="animated rotateIn"</em></p>
+
+  		<h3>zoomIn</h3>
+  		<img src="images/dog3.jpg" alt="Собака - лучший друг человека" class="animated mov">
+  		<p><em>class="animated zoomIn"</em></p>
+
+  		<h3>Простая картинка</h3>
+  		<img src="images/dog4.jpg" alt="Собака - лучший друг человека" >
+  		<p><em>(без анимации)</em></p>
+
+  	</div>
+  	<script>
+  		$(window).scroll(function() {
+  			$('.mov').each(function(){
+  				var imagePos = $(this).offset().top;
+  				var topOfWindow = $(window).scrollTop();
+  				if (imagePos < topOfWindow+200) {
+  					$(this).addClass('wobble');
+  				}
+  			});
+  		});
+  	</script>
+
+  </body>
+  </html>
